@@ -21,4 +21,18 @@ class ImageConstant {
   static String headPhone = 'assets/headPhone.png';
   static String beosound = 'assets/beosound.png';
   static String beolit = 'assets/beolit.png';
+  static String arrowLeft = 'assets/arrow-long-left.png';
+  static String options = 'assets/options.png';
+  static String soundBalance = 'assets/beosoundBalance.png';
+  static String blackIndicator = 'assets/blackIndicator.png';
+  static String shoping = 'assets/Shoping.png';
+  static String yellowDot = 'assets/yellowDot.png';
+  static String greyDot = 'assets/greyDot.png';
+  static String beoPlay = 'assets/beoPlay.png';
+  static String topLine = 'assets/topLine.png';
+  static String Line = 'assets/Line.png';
+  static String bar = 'assets/Bar.png';
+  static String shoppingBag = 'assets/shopping-bag.png';
+  static String base = 'assets/Base.png';
+  static String menu = 'assets/menuShape.png';
 }

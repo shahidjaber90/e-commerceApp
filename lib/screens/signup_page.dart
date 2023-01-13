@@ -108,7 +108,7 @@ class _SignupPageState extends State<SignupPage> {
                             textFieldFunction(TextConstant.emailText,TextConstant.emailText,
                       usernameEmail,ImageConstant.emailIcon,context),
                             textFieldFunction(TextConstant.userNameText,TextConstant.userNameText,
-                      usernameEmail,ImageConstant.userIcon,context),
+                      userName,ImageConstant.userIcon,context),
                     passwordFieldFunction(TextConstant.passwordText,TextConstant.passwordFieldText,
                       password,ImageConstant.lockIcon,context,_obsecureText,GestureDetector(
                             onTap: () {

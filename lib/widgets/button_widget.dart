@@ -126,3 +126,33 @@ buttonFunction3(btnText,color, context, navigate,lIcon1) {
         )),
   );
 }
+
+// 4
+
+buttonFunction4(color, context, navigate) {
+  return Container(
+    height: 44,
+    width: MediaQuery.of(context).size.width * 0.90,
+    child: ElevatedButton(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => navigate));
+        },
+        style: ElevatedButton.styleFrom(
+          backgroundColor: color,
+        ),
+        child:  Container(
+              alignment: Alignment.center,
+              height: 44,
+              width: MediaQuery.of(context).size.width * 0.35,
+              child: Text(TextConstant.addToCart,
+                  style: const TextStyle(
+                      fontSize: 12,
+                      letterSpacing: 2,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'DM Sans')),
+            ),
+         
+        )
+  );
+}

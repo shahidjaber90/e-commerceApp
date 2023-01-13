@@ -1,3 +1,4 @@
+import 'package:e_commerce/screens/category_page.dart';
 import 'package:e_commerce/utils/colors.dart';
 import 'package:e_commerce/utils/images.dart';
 import 'package:e_commerce/utils/texts.dart';
@@ -152,77 +153,77 @@ class _HomeViewState extends State<HomeView> {
                   ],
                 ),
                 GNav(tabs: [
-                  
-                    GButton(
-                      icon: Icons.home_outlined,
-                      iconColor: ColorConstant.blackColor,style: GnavStyle.oldSchool,
-                      iconActiveColor: ColorConstant.blackColor,
-                      text: '   Home',
-                      textColor: ColorConstant.blackColor,
-                      backgroundColor: ColorConstant.startedButtonColor,
-                      iconSize: 24,
-                      padding:const EdgeInsets.all(16),
-                      margin:const EdgeInsets.only(left: 10,top: 10),
-                      textStyle:const TextStyle(
+                  GButton(
+                    icon: Icons.home_outlined,
+                    iconColor: ColorConstant.blackColor,
+                    style: GnavStyle.oldSchool,
+                    iconActiveColor: ColorConstant.blackColor,
+                    text: '   Home',
+                    textColor: ColorConstant.blackColor,
+                    backgroundColor: ColorConstant.startedButtonColor,
+                    iconSize: 24,
+                    padding: const EdgeInsets.all(16),
+                    margin: const EdgeInsets.only(left: 10, top: 10),
+                    textStyle: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w700,
-                        fontFamily: 'DM Sans'
-                      ),
-                    ),
-
-                    GButton(
-                      icon: Icons.search,
-                      iconColor: ColorConstant.blackColor,style: GnavStyle.oldSchool,
-                      iconActiveColor: ColorConstant.blackColor,
-                      text: '   Search',
-                      textColor: ColorConstant.blackColor,
-                      backgroundColor: ColorConstant.startedButtonColor,
-                      iconSize: 24,
-                      padding:const EdgeInsets.all(16),
-                      margin:const EdgeInsets.only(left: 10,top: 10),
-                      textStyle:const TextStyle(
+                        fontFamily: 'DM Sans'),
+                  ),
+                  GButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CategoryPage()));
+                    },
+                    icon: Icons.search,
+                    iconColor: ColorConstant.blackColor,
+                    style: GnavStyle.oldSchool,
+                    iconActiveColor: ColorConstant.blackColor,
+                    text: '   Search',
+                    textColor: ColorConstant.blackColor,
+                    backgroundColor: ColorConstant.startedButtonColor,
+                    iconSize: 24,
+                    padding: const EdgeInsets.all(16),
+                    margin: const EdgeInsets.only(left: 10, top: 10),
+                    textStyle: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w700,
-                        fontFamily: 'DM Sans'
-                      ),
-                    ),
-
-                    GButton(
-                      icon: LineIcons.store,
-                      iconColor: ColorConstant.blackColor,style: GnavStyle.oldSchool,
-                      iconActiveColor: ColorConstant.blackColor,
-                      text: '   Order',
-                      textColor: ColorConstant.blackColor,
-                      backgroundColor: ColorConstant.startedButtonColor,
-                      iconSize: 24,
-                      padding:const EdgeInsets.all(16),
-                      margin:const EdgeInsets.only(left: 10,top: 10),
-                      textStyle:const TextStyle(
+                        fontFamily: 'DM Sans'),
+                  ),
+                  GButton(
+                    icon: LineIcons.store,
+                    iconColor: ColorConstant.blackColor,
+                    style: GnavStyle.oldSchool,
+                    iconActiveColor: ColorConstant.blackColor,
+                    text: '   Order',
+                    textColor: ColorConstant.blackColor,
+                    backgroundColor: ColorConstant.startedButtonColor,
+                    iconSize: 24,
+                    padding: const EdgeInsets.all(16),
+                    margin: const EdgeInsets.only(left: 10, top: 10),
+                    textStyle: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w700,
-                        fontFamily: 'DM Sans'
-                      ),
-                    ),
-
-                    GButton(
-                      icon: Icons.person_outline_outlined,
-                      iconColor: ColorConstant.blackColor,style: GnavStyle.oldSchool,
-                      iconActiveColor: ColorConstant.blackColor,
-                      text: '   User',
-                      textColor: ColorConstant.blackColor,
-                      backgroundColor: ColorConstant.startedButtonColor,
-                      iconSize: 24,
-                      padding:const EdgeInsets.all(16),
-                      margin:const EdgeInsets.only(left: 10,top: 10),
-                      textStyle:const TextStyle(
+                        fontFamily: 'DM Sans'),
+                  ),
+                  GButton(
+                    icon: Icons.person_outline_outlined,
+                    iconColor: ColorConstant.blackColor,
+                    style: GnavStyle.oldSchool,
+                    iconActiveColor: ColorConstant.blackColor,
+                    text: '   User',
+                    textColor: ColorConstant.blackColor,
+                    backgroundColor: ColorConstant.startedButtonColor,
+                    iconSize: 24,
+                    padding: const EdgeInsets.all(16),
+                    margin: const EdgeInsets.only(left: 10, top: 10),
+                    textStyle: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w700,
-                        fontFamily: 'DM Sans'
-                      ),
-                    ),
-
-
-                  ]),
+                        fontFamily: 'DM Sans'),
+                  ),
+                ]),
               ],
             ),
           ),

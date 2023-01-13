@@ -25,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
   loginFunction() {
     if (usernameEmail.text == 'shahidjaber90' || usernameEmail.text == 'shahidjaber90@gmail.com' &&
         password.text == '123456') {
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const HomeView()),
       );

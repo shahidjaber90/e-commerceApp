@@ -9,4 +9,7 @@ class ColorConstant {
   static Color facebookBtnColor = const Color(0xff3C79E6);
   static Color blackColor = const Color(0xff000000);
   static Color cardBgColor = const Color(0xffF3F6F8);
+  static Color greenColor = const Color(0xff02C697);
+  static Color pinkColor = const Color(0xffF8B6C3);
+  static Color whiteColor = const Color(0xffFFFFFF);
 }

@@ -31,8 +31,31 @@ class TextConstant {
   static String recommendedText = "Recommended for You";
   static String beosoundText = "Beosound 1";
   static String beolitText = "Beolit 17";
-  static String beosoundPriceText = '1,600';
-  static String beolitPriceText = '550';
+  static String beosoundPriceText = '\$1,600';
+  static String beolitPriceText = '\$550';
+  static String speakersText = 'SPEAKERS';
+  static String soundBalanceText = 'Beosound Balance';
+  static String soundBalanceAboutText = 'Innovative, wireless home speaker';
+  static String tabbar1Text = 'View all';
+  static String tabbar2Text = 'Portable';
+  static String tabbar3Text = 'Multiroom';
+  static String tabbar4Text = 'Architectur';
+  static String ratingBeoSoundText = '4.5';
+  static String priceBeoSoundText = '\$1,600';
+  static String beoPlayText = 'Beopaly A9';
+  static String gender = 'Gender';
+  static String priceRate = 'Price Rate';
+  static String Color = 'Color';
+  static String apply = 'APPLY FILTERS (4)';
+  static String reset = 'RESET';
+  static String itemCardTitle = 'Beosound \nBalance';
+  static String from = 'From';
+  static String addToCart = 'ADD TO CART';
+  static String myCart = 'MY CART';
+  static String availableColors = 'Available Colors';
+  static String discriptionTitle = 'Wireless, smart home speaker';
+  static String discriptionSubTitle =
+      'A wireless speaker with a dynamic acoustic performance designed to be positioned up against the wall on a shelf or side table in your home. Impressive sound compared to its size.';
   // static String emailFieldText = 'sajinTamangUIUX@figma.com';
   // static String userFieldText = 'SajinUIUX';
 }
