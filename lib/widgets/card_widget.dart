@@ -20,7 +20,7 @@ cardCategory(
     textTopDirection,
     productTopDirection) {
   return Stack(children: [
-    Container(
+    SizedBox(
       width: MediaQuery.of(context).size.width * widthMainBox,
       height: MediaQuery.of(context).size.height * heightMainBox,
       // color: Colors.amber,
@@ -40,7 +40,7 @@ cardCategory(
     Positioned(
         top: MediaQuery.of(context).size.width * imageTopDirecion,
         left: MediaQuery.of(context).size.width * imageLeftDirection,
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width * widthBox,
           height: MediaQuery.of(context).size.height * heightBox,
           child: Image.asset(itemImage),
@@ -48,7 +48,7 @@ cardCategory(
     Positioned(
         top: MediaQuery.of(context).size.width * textTopDirection,
         left: MediaQuery.of(context).size.width * textLeftDirection,
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width * widthBox,
           height: MediaQuery.of(context).size.height * heightBox,
           child: Text(
@@ -66,7 +66,7 @@ cardCategory(
     Positioned(
         top: MediaQuery.of(context).size.width * productTopDirection,
         left: MediaQuery.of(context).size.width * textLeftDirection,
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width * widthBox,
           height: MediaQuery.of(context).size.height * heightBox,
           child: Text(
@@ -103,7 +103,7 @@ cardCategory2(
     indicatorTopDirection,
     indicatorLeftDirection) {
   return Stack(children: [
-    Container(
+    SizedBox(
       width: MediaQuery.of(context).size.width * widthMainBox,
       height: MediaQuery.of(context).size.height * heightMainBox,
       // color: Colors.amber,
@@ -123,7 +123,7 @@ cardCategory2(
     Positioned(
         top: MediaQuery.of(context).size.width * imageTopDirecion,
         left: MediaQuery.of(context).size.width * imageLeftDirection,
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width * widthBox,
           height: MediaQuery.of(context).size.height * heightBox,
           child: Image.asset(itemImage),
@@ -131,7 +131,7 @@ cardCategory2(
     Positioned(
         top: MediaQuery.of(context).size.width * textTopDirection,
         left: MediaQuery.of(context).size.width * textLeftDirection,
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width * widthBox,
           height: MediaQuery.of(context).size.height * heightBox,
           child: Text(
@@ -149,7 +149,7 @@ cardCategory2(
     Positioned(
         top: MediaQuery.of(context).size.width * productTopDirection,
         left: MediaQuery.of(context).size.width * productLeftDirection,
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width * widthBox,
           height: MediaQuery.of(context).size.height * heightBox,
           child: Text(
@@ -185,23 +185,14 @@ cardCategory2(
 
 // Card 3
 
-cardCategory3(
-  context,
-  mainBoxHeight,
-  mainBoxWidth,
-  cardHeight,
-  cardWidth,
-  cardTopDirection,
-  cardLeftDirection,
-  itemImage,itemName
-) {
+cardCategory3(context, mainBoxHeight, mainBoxWidth, cardHeight, cardWidth,
+    cardTopDirection, cardLeftDirection, itemImage, itemName) {
   return Stack(
     children: [
-      Container(
+      SizedBox(
         height: MediaQuery.of(context).size.height * mainBoxHeight,
         width: MediaQuery.of(context).size.width * mainBoxWidth,
       ),
-
       Positioned(
         top: MediaQuery.of(context).size.width * cardHeight,
         left: MediaQuery.of(context).size.width * cardWidth,
@@ -214,55 +205,101 @@ cardCategory3(
           ),
           child: Row(
             children: [
-              Container(
+              SizedBox(
                 // color: Colors.lime,
                 height: double.infinity,
                 width: MediaQuery.of(context).size.width * 0.25,
                 child: Image.asset(itemImage),
               ),
-              Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Text(itemName,style: TextStyle(
-                      fontSize: 16,
-                      fontFamily: 'DM Sans',
-                      fontWeight: FontWeight.w700,
-                      color: ColorConstant.blackColor),),
-                    Row(
-                      children: [
-                        Text(TextConstant.ratingBeoSoundText,style: TextStyle(
-                          fontSize: 12,
-                          fontFamily: 'DM Sans',
-                          fontWeight: FontWeight.w400,
-                          color: ColorConstant.blackColor),),
-                          SizedBox(width: MediaQuery.of(context).size.width * 0.02,),
-                          Image.asset(ImageConstant.yellowDot),
-                          SizedBox(width: MediaQuery.of(context).size.width * 0.02,),
-                          Image.asset(ImageConstant.yellowDot),
-                          SizedBox(width: MediaQuery.of(context).size.width * 0.02,),
-                          Image.asset(ImageConstant.yellowDot),
-                          SizedBox(width: MediaQuery.of(context).size.width * 0.02,),
-                          Image.asset(ImageConstant.yellowDot),
-                          SizedBox(width: MediaQuery.of(context).size.width * 0.02,),
-                          Image.asset(ImageConstant.greyDot),                          
-                      ],
-                    ),
-                    Text(TextConstant.priceBeoSoundText,style: TextStyle(
-                          fontSize: 12,
-                          fontFamily: 'DM Sans',
-                          fontWeight: FontWeight.w400,
-                          color: ColorConstant.blackColor),),
-                  ],
-                ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    itemName,
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'DM Sans',
+                        fontWeight: FontWeight.w700,
+                        color: ColorConstant.blackColor),
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        TextConstant.ratingBeoSoundText,
+                        style: TextStyle(
+                            fontSize: 12,
+                            fontFamily: 'DM Sans',
+                            fontWeight: FontWeight.w400,
+                            color: ColorConstant.blackColor),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.02,
+                      ),
+                      Image.asset(ImageConstant.yellowDot),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.02,
+                      ),
+                      Image.asset(ImageConstant.yellowDot),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.02,
+                      ),
+                      Image.asset(ImageConstant.yellowDot),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.02,
+                      ),
+                      Image.asset(ImageConstant.yellowDot),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.02,
+                      ),
+                      Image.asset(ImageConstant.greyDot),
+                    ],
+                  ),
+                  Text(
+                    TextConstant.priceBeoSoundText,
+                    style: TextStyle(
+                        fontSize: 12,
+                        fontFamily: 'DM Sans',
+                        fontWeight: FontWeight.w400,
+                        color: ColorConstant.blackColor),
+                  ),
+                ],
               )
             ],
           ),
         ),
       ),
-
-      
     ],
+  );
+}
+
+cardOrderFunction(color, image, text) {
+  return SizedBox(
+    height: 90,
+    width: 63,
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Container(
+          height: 64,
+          width: 63,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(8),
+      color: color
+    ),
+          child: Image.asset(image),
+        ),
+        const SizedBox(height: 8,),
+        Text(
+        text,
+        style: TextStyle(
+            fontSize: 12,
+            fontFamily: 'DM Sans',
+            fontWeight: FontWeight.w700,
+            color: ColorConstant.blackColor),
+        )        
+      ],
+    ),
   );
 }

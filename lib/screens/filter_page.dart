@@ -1,11 +1,10 @@
-import 'package:e_commerce/screens/category_page.dart';
+import 'package:e_commerce/screens/addToCard_page.dart';
 import 'package:e_commerce/utils/colors.dart';
 import 'package:e_commerce/utils/images.dart';
 import 'package:e_commerce/utils/texts.dart';
 import 'package:e_commerce/widgets/card_widget.dart';
 import 'package:e_commerce/widgets/colorBox_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
 
 class FilterPage extends StatelessWidget {
   const FilterPage({super.key});
@@ -15,86 +14,84 @@ class FilterPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: ColorConstant.bgColor,
       body: Stack(children: [
-        Container(
-          child: Column(
-            children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.06,
-              ),
-              Container(
-                color: ColorConstant.textFieldTextColor,
-                height: MediaQuery.of(context).size.height * 0.90,
-                width: MediaQuery.of(context).size.width * 100,
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 20,
-                        right: 20,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          IconButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              icon: const Icon(Icons.arrow_back_outlined)),
-                          Text(
-                            TextConstant.speakersText,
-                            style: TextStyle(
-                              color: ColorConstant.blackColor,
-                              fontWeight: FontWeight.w700,
-                              fontSize: 12,
-                            ),
+        Column(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.04,
+            ),
+            Container(
+              color: ColorConstant.textFieldTextColor,
+              height: MediaQuery.of(context).size.height * 0.925,
+              width: MediaQuery.of(context).size.width * 100,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 20,
+                      right: 20,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            icon: const Icon(Icons.arrow_back_outlined)),
+                        Text(
+                          TextConstant.speakersText,
+                          style: TextStyle(
+                            color: ColorConstant.blackColor,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
                           ),
-                          Image.asset(ImageConstant.options),
-                        ],
-                      ),
+                        ),
+                        Image.asset(ImageConstant.options),
+                      ],
                     ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.015,
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      width: MediaQuery.of(context).size.width * 1.00,
-                      child: cardCategory2(
-                          context,
-                          ImageConstant.soundBalance,
-                          TextConstant.soundBalanceText,
-                          TextConstant.soundBalanceAboutText,
-                          0.28, // Height Card Box
-                          0.90, // Width Card Box
-                          0.45, // Height Main Box
-                          1.00, // Width Main Box
-                          0.34, // Card Top Direction
-                          0.05, // Card Left Direction
-                          0.05, // Image Left Direction
-                          -0.01, // Image Top Direction
-                          0.05, // Text Left Direction
-                          0.62, // Text Top Direction
-                          0.72, // Product Top Direction
-                          0.05, // Product Left Direction
-                          0.85, // Indicator Top Direction
-                          0.425), // Indicator Left Direction
-                    ),
-                  ],
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.008,
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: MediaQuery.of(context).size.width * 1.00,
+                    child: cardCategory2(
+                        context,
+                        ImageConstant.soundBalance,
+                        TextConstant.soundBalanceText,
+                        TextConstant.soundBalanceAboutText,
+                        0.28, // Height Card Box
+                        0.90, // Width Card Box
+                        0.45, // Height Main Box
+                        1.00, // Width Main Box
+                        0.34, // Card Top Direction
+                        0.05, // Card Left Direction
+                        0.05, // Image Left Direction
+                        -0.01, // Image Top Direction
+                        0.05, // Text Left Direction
+                        0.62, // Text Top Direction
+                        0.72, // Product Top Direction
+                        0.05, // Product Left Direction
+                        0.85, // Indicator Top Direction
+                        0.425), // Indicator Left Direction
+                  ),
+                ],
 
-                  // Home Indicator
-                ),
+                // Home Indicator
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.010,
-              ),
-              Container(
-                alignment: Alignment.bottomCenter,
-                height: MediaQuery.of(context).size.height * 0.013,
-                child: Opacity(
-                    opacity: 0.05,
-                    child: Image.asset(ImageConstant.homeIndicator)),
-              ),
-            ],
-          ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.010,
+            ),
+            Container(
+              alignment: Alignment.bottomCenter,
+              height: MediaQuery.of(context).size.height * 0.013,
+              child: Opacity(
+                  opacity: 0.05,
+                  child: Image.asset(ImageConstant.homeIndicator)),
+            ),
+          ],
         ),
         Positioned(
             top: MediaQuery.of(context).size.height * 0.25,
@@ -103,7 +100,7 @@ class FilterPage extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.72,
               width: MediaQuery.of(context).size.width * 1.00,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10)),
                   color: ColorConstant.bgColor),
@@ -120,7 +117,7 @@ class FilterPage extends StatelessWidget {
                     // Gender
                     Padding(
                       padding: const EdgeInsets.only(left: 24, right: 24),
-                      child: Container(
+                      child: SizedBox(
                         height: MediaQuery.of(context).size.height * 0.16,
                         width: MediaQuery.of(context).size.width * 1.00,
                         // color: Colors.cyan,
@@ -207,7 +204,7 @@ class FilterPage extends StatelessWidget {
 
                     Padding(
                       padding: const EdgeInsets.only(left: 24, right: 24),
-                      child: Container(
+                      child: SizedBox(
                         height: MediaQuery.of(context).size.height * 0.20,
                         width: MediaQuery.of(context).size.width * 1.00,
                         // color: Colors.cyan,
@@ -231,7 +228,7 @@ class FilterPage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Image.asset(ImageConstant.bar),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 Row(
@@ -317,8 +314,8 @@ class FilterPage extends StatelessWidget {
 
                     Padding(
                       padding: const EdgeInsets.only(left: 24, right: 24),
-                      child: Container(
-                        height: MediaQuery.of(context).size.height * 0.16,
+                      child: SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.15,
                         width: MediaQuery.of(context).size.width * 1.00,
                         // color: Colors.cyan,
                         child: Column(
@@ -359,7 +356,7 @@ class FilterPage extends StatelessWidget {
 
                     Padding(
                       padding: const EdgeInsets.only(left: 24, right: 24),
-                      child: Container(
+                      child: SizedBox(
                         height: MediaQuery.of(context).size.height * 0.155,
                         width: MediaQuery.of(context).size.width * 1.00,
                         // color: Colors.cyan,
@@ -372,7 +369,7 @@ class FilterPage extends StatelessWidget {
                               children: [
                                 Container(
                                   alignment: Alignment.center,
-                                  height: 44,
+                                  height: 42,
                                   width: 193,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(6),
@@ -381,7 +378,7 @@ class FilterPage extends StatelessWidget {
                                   child: ElevatedButton(
                                     onPressed: () {
                                       Navigator.push(context,
-                                          MaterialPageRoute(builder: (context) => const CategoryPage()));
+                                          MaterialPageRoute(builder: (context) => const AddToCard()));
                                     },
                                     style: ElevatedButton.styleFrom(
                                         backgroundColor:
@@ -400,7 +397,7 @@ class FilterPage extends StatelessWidget {
                                 ),
                                 Container(
                                   alignment: Alignment.center,
-                                  height: 44,
+                                  height: 42,
                                   width: 96,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(6),

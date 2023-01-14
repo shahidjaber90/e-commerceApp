@@ -80,22 +80,20 @@ class _LoginPageState extends State<LoginPage> {
                 width: MediaQuery.of(context).size.width * 0.85,
                 child: Column(
                   children: [
-                    Container(
-                      child: Row(
-                        children: [
-                          Image.asset(ImageConstant.location),
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.02,
-                          ),
-                          Text(
-                            TextConstant.locationText,
-                            style: const TextStyle(
-                                fontSize: 12,
-                                fontFamily: 'DM Sans',
-                                fontWeight: FontWeight.w700),
-                          )
-                        ],
-                      ),
+                    Row(
+                      children: [
+                        Image.asset(ImageConstant.location),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.02,
+                        ),
+                        Text(
+                          TextConstant.locationText,
+                          style: const TextStyle(
+                              fontSize: 12,
+                              fontFamily: 'DM Sans',
+                              fontWeight: FontWeight.w700),
+                        )
+                      ],
                     ),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.06,
@@ -127,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                     
                     
                     Padding(
-                        padding: EdgeInsets.only(left: 5, right: 5),
+                        padding: const EdgeInsets.only(left: 5, right: 5),
                         child: Column(
                           children: [
                             textFieldFunction(
@@ -157,9 +155,9 @@ class _LoginPageState extends State<LoginPage> {
                           ],
                         )),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.22,
+                      height: MediaQuery.of(context).size.height * 0.18,
                     ),
-                    Container(
+                    SizedBox(
                       height: 44,
                       width: MediaQuery.of(context).size.width * 0.90,
                       child: ElevatedButton(
@@ -193,7 +191,7 @@ class _LoginPageState extends State<LoginPage> {
                                   height: 44,
                                   width:
                                       MediaQuery.of(context).size.width * 0.18,
-                                  child: Icon(Icons.login_outlined)),
+                                  child: const Icon(Icons.login_outlined)),
                             ],
                           )),
                     ),
@@ -231,7 +229,7 @@ class _LoginPageState extends State<LoginPage> {
                       height: MediaQuery.of(context).size.height * 0.02,
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 1),
+                      padding: const EdgeInsets.only(top: 1),
                       child: buttonFunction3(
                           TextConstant.signFacebookText,
                           ColorConstant.facebookBtnColor,

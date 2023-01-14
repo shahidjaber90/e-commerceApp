@@ -31,6 +31,16 @@ colorBox2(color) {
     ),
   );
 }
+colorBox3(color) {
+  return Container(
+    height: 16,
+    width: 16,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(5),
+      color: color,
+    ),
+  );
+}
 colorBoxIcon2(color,setIcon) {
   return Container(
     height: 24,

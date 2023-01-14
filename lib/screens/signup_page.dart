@@ -1,4 +1,3 @@
-import 'package:e_commerce/screens/home_page.dart';
 import 'package:e_commerce/screens/login_page.dart';
 import 'package:e_commerce/utils/colors.dart';
 import 'package:e_commerce/utils/images.dart';
@@ -48,32 +47,30 @@ class _SignupPageState extends State<SignupPage> {
           child: Column(
             children: [
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.06,
+                height: MediaQuery.of(context).size.height * 0.04,
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.90,
+                height: MediaQuery.of(context).size.height * 0.94,
                 width: MediaQuery.of(context).size.width * 0.85,
                 child: Column(
                   children: [
-                    Container(
-                      child: Row(
-                        children: [
-                          Image.asset(ImageConstant.location),
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.02,
-                          ),
-                          Text(
-                            TextConstant.locationText,
-                            style: const TextStyle(
-                                fontSize: 12,
-                                fontFamily: 'DM Sans',
-                                fontWeight: FontWeight.w700),
-                          )
-                        ],
-                      ),
+                    Row(
+                      children: [
+                        Image.asset(ImageConstant.location),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.02,
+                        ),
+                        Text(
+                          TextConstant.locationText,
+                          style: const TextStyle(
+                              fontSize: 12,
+                              fontFamily: 'DM Sans',
+                              fontWeight: FontWeight.w700),
+                        )
+                      ],
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.06,
+                      height: MediaQuery.of(context).size.height * 0.04,
                     ),
 
                     Container(
@@ -127,26 +124,24 @@ class _SignupPageState extends State<SignupPage> {
                     Column(
                       // crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          child: Row(
-                            // mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Checkbox(
-                                  value: isChecked,
-                                  onChanged: (value) {
-                                    isChecked = !isChecked;
-                                    setState(() {});
-                                  }),
-                              Text(
-                                TextConstant.agreeCheckText,
-                                style: TextStyle(
-                                    color: ColorConstant.haveanAccountColor,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: 'DM Sans'),
-                              ),
-                            ],
-                          ),
+                        Row(
+                          // mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Checkbox(
+                                value: isChecked,
+                                onChanged: (value) {
+                                  isChecked = !isChecked;
+                                  setState(() {});
+                                }),
+                            Text(
+                              TextConstant.agreeCheckText,
+                              style: TextStyle(
+                                  color: ColorConstant.haveanAccountColor,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w700,
+                                  fontFamily: 'DM Sans'),
+                            ),
+                          ],
                         ),
                         Container(
                           alignment: Alignment.topLeft,

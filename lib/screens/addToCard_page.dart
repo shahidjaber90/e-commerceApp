@@ -1,14 +1,10 @@
-import 'package:e_commerce/screens/category_page.dart';
-import 'package:e_commerce/screens/filter_page.dart';
 import 'package:e_commerce/screens/mycart_page.dart';
 import 'package:e_commerce/utils/colors.dart';
 import 'package:e_commerce/utils/images.dart';
 import 'package:e_commerce/utils/texts.dart';
 import 'package:e_commerce/widgets/button_widget.dart';
-import 'package:e_commerce/widgets/card_widget.dart';
 import 'package:e_commerce/widgets/colorBox_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
 
 class AddToCard extends StatefulWidget {
   const AddToCard({super.key});
@@ -23,46 +19,44 @@ class _AddToCardState extends State<AddToCard> {
     return Scaffold(
       backgroundColor: ColorConstant.bgColor,
       body: Stack(children: [
-        Container(
-          child: Column(
-            children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.06,
-              ),
-              Container(
-                color: ColorConstant.cardBgColor,
-                height: MediaQuery.of(context).size.height * 0.90,
-                width: MediaQuery.of(context).size.width * 100,
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 10,
-                        right: 10,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          IconButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              icon: const Icon(Icons.arrow_back_outlined)),
-                          
-                          Image.asset(ImageConstant.shoppingBag),
-                        ],
-                      ),
+        Column(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.06,
+            ),
+            Container(
+              color: ColorConstant.cardBgColor,
+              height: MediaQuery.of(context).size.height * 0.90,
+              width: MediaQuery.of(context).size.width * 100,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 10,
+                      right: 10,
                     ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.015,
-                    ),              
-                ],
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            icon: const Icon(Icons.arrow_back_outlined)),
+                        
+                        Image.asset(ImageConstant.shoppingBag),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.015,
+                  ),              
+              ],
 
-                ),
               ),
-              
-            ],
-          ),
+            ),
+            
+          ],
         ),
 
         // Positioned Work Start
@@ -74,7 +68,7 @@ class _AddToCardState extends State<AddToCard> {
               height: MediaQuery.of(context).size.height * 0.82,
               width: MediaQuery.of(context).size.width * 1.00,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10)),
                   color: ColorConstant.cardBgColor),
@@ -90,7 +84,7 @@ class _AddToCardState extends State<AddToCard> {
                     // Item Info
                     Padding(
                       padding: const EdgeInsets.only(left: 24, right: 24,top: 20),
-                      child: Container(
+                      child: SizedBox(
                         height: MediaQuery.of(context).size.height * 0.40,
                         width: MediaQuery.of(context).size.width * 1.00,
                         child: Column(
@@ -188,7 +182,7 @@ class _AddToCardState extends State<AddToCard> {
               width: MediaQuery.of(context).size.width * 1.00,
               decoration: BoxDecoration(
               color: ColorConstant.bgColor,
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(12),topRight:  Radius.circular(12))
+              borderRadius: const BorderRadius.only(topLeft: Radius.circular(12),topRight:  Radius.circular(12))
               ),
               child: 
               Padding(

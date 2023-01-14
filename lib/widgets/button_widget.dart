@@ -2,8 +2,8 @@ import 'package:e_commerce/utils/colors.dart';
 import 'package:e_commerce/utils/texts.dart';
 import 'package:flutter/material.dart';
 
-buttonFunction(color, context, navigate,images) {
-  return Container(
+buttonFunction(text,color, context, navigate,images) {
+  return SizedBox(
     height: 44,
     width: MediaQuery.of(context).size.width * 0.90,
     child: ElevatedButton(
@@ -24,8 +24,8 @@ buttonFunction(color, context, navigate,images) {
             Container(
               alignment: Alignment.center,
               height: 44,
-              width: MediaQuery.of(context).size.width * 0.35,
-              child: Text(TextConstant.startedButtonText,
+              width: MediaQuery.of(context).size.width * 0.44,
+              child: Text(text,
                   style: const TextStyle(
                       fontSize: 12,
                       letterSpacing: 2,
@@ -46,7 +46,7 @@ buttonFunction(color, context, navigate,images) {
 
 
 buttonFunction2(btnText,color, context, navigate,rIcon1) {
-  return Container(
+  return SizedBox(
     height: 44,
     width: MediaQuery.of(context).size.width * 0.90,
     child: ElevatedButton(
@@ -87,7 +87,7 @@ buttonFunction2(btnText,color, context, navigate,rIcon1) {
 
 
 buttonFunction3(btnText,color, context, navigate,lIcon1) {
-  return Container(
+  return SizedBox(
     height: 44,
     width: MediaQuery.of(context).size.width * 0.90,
     child: ElevatedButton(
@@ -130,7 +130,7 @@ buttonFunction3(btnText,color, context, navigate,lIcon1) {
 // 4
 
 buttonFunction4(color, context, navigate) {
-  return Container(
+  return SizedBox(
     height: 44,
     width: MediaQuery.of(context).size.width * 0.90,
     child: ElevatedButton(
@@ -154,5 +154,47 @@ buttonFunction4(color, context, navigate) {
             ),
          
         )
+  );
+}
+
+
+// Reverse Button
+
+buttonFunctionReverse(text,color, context, navigate,images) {
+  return SizedBox(
+    height: 44,
+    width: MediaQuery.of(context).size.width * 0.90,
+    child: ElevatedButton(
+        onPressed: () {
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => navigate));
+        },
+        style: ElevatedButton.styleFrom(
+          backgroundColor: color,
+        ),
+        child: Row(
+          children: [
+            Container(
+                height: 44,
+                width: MediaQuery.of(context).size.width * 0.04,
+                child: Image.asset(images)),
+            Container(
+                alignment: Alignment.centerLeft,
+                height: 44,
+                width: MediaQuery.of(context).size.width * 0.12),
+            Container(
+              alignment: Alignment.center,
+              height: 44,
+              width: MediaQuery.of(context).size.width * 0.50,
+              child: Text(text,
+                  style: const TextStyle(
+                      fontSize: 12,
+                      letterSpacing: 2,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'DM Sans')),
+            ),
+            ],
+        )
+        ),
   );
 }

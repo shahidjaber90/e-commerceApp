@@ -1,13 +1,9 @@
-import 'dart:ffi';
-
 import 'package:e_commerce/screens/filter_page.dart';
 import 'package:e_commerce/utils/colors.dart';
 import 'package:e_commerce/utils/images.dart';
 import 'package:e_commerce/utils/texts.dart';
 import 'package:e_commerce/widgets/card_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class CategoryPage extends StatefulWidget {
   const CategoryPage({super.key});
@@ -94,7 +90,7 @@ class _CategoryPageState extends State<CategoryPage>
 
                 // TabBar View
 
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width * 1.00,
                   child: Padding(
                     padding: const EdgeInsets.only(left: 14),
@@ -103,9 +99,9 @@ class _CategoryPageState extends State<CategoryPage>
                         labelColor: ColorConstant.blackColor,
                         indicatorColor: ColorConstant.blackColor,
                         indicatorSize: TabBarIndicatorSize.label,
-                        labelStyle: TextStyle(
+                        labelStyle: const TextStyle(
                             fontWeight: FontWeight.w700, fontSize: 12),
-                        labelPadding: EdgeInsets.only(right: 10),
+                        labelPadding: const EdgeInsets.only(right: 10),
                         tabs: [
                           Tab(
                             text: TextConstant.tabbar1Text,
@@ -122,7 +118,7 @@ class _CategoryPageState extends State<CategoryPage>
                         ]),
                   ),
                 ),
-                Container(
+                SizedBox(
                   height: MediaQuery.of(context).size.height * 0.30,
                   child: TabBarView(controller: _tabController, children: [
                     // card 3 start
@@ -192,7 +188,7 @@ class _CategoryPageState extends State<CategoryPage>
               MaterialPageRoute(builder: (context) => const FilterPage()));
         },
         backgroundColor: ColorConstant.startedButtonColor,
-        child: Image.asset(ImageConstant.shoping),
+        child: Image.asset(ImageConstant.shoppingBag),
       ),
     );
   }

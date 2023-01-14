@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class ImageConstant {
   static String yellowOval = 'assets/yellowOval.png';
@@ -35,4 +33,20 @@ class ImageConstant {
   static String shoppingBag = 'assets/shopping-bag.png';
   static String base = 'assets/Base.png';
   static String menu = 'assets/menuShape.png';
+  static String minus = 'assets/math-minus.png';
+  static String plus = 'assets/math-plus.png';
+  static String cartStore = 'assets/cartStore.png';
+  static String arrowDown = 'assets/arrow-long-down.png';
+  static String devideSym = 'assets/divideSym.png';
+  static String check = 'assets/check.png';
+  static String arrowLongRight = 'assets/arrow-long-right.png';
+  static String menuShape = 'assets/menuShape.png';
+  static String profile = 'assets/Image.png';
+  static String colorHeadphone = 'assets/headSpeaker.png';
+  static String arrowRight = 'assets/arrow-right.png';
+  static String masterCard = 'assets/Icon.png';
+  static String successful = 'assets/Shape.png';
+  static String orderFailed = 'assets/failed.png';
+  static String warning = 'assets/stopIcon.png';
+  static String arrowLongLeft = 'assets/pop-arrow-long-left.png';
 }

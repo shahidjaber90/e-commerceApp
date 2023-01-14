@@ -123,13 +123,13 @@ class HomePage extends StatelessWidget {
 
 
                 Padding(
-                  padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
+                  padding: const EdgeInsets.only(top: 24, left: 20, right: 20),
                   child:
-                      buttonFunction(ColorConstant.startedButtonColor, context,const LoginPage(),ImageConstant.forwardArrow),
+                      buttonFunction(TextConstant.startedButtonText,ColorConstant.startedButtonColor, context,const LoginPage(),ImageConstant.forwardArrow),
                 ),
                 Container(
                   alignment: Alignment.bottomCenter,
-                  height: MediaQuery.of(context).size.height * 0.10,
+                  height: MediaQuery.of(context).size.height * 0.07,
                   child: Opacity(opacity: 0.05,child: Image.asset(ImageConstant.homeIndicator)),
                 ),
               ],

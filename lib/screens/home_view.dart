@@ -1,11 +1,11 @@
+import 'package:e_commerce/screens/addToCard_page.dart';
 import 'package:e_commerce/screens/category_page.dart';
+import 'package:e_commerce/screens/shipping_page.dart';
 import 'package:e_commerce/utils/colors.dart';
 import 'package:e_commerce/utils/images.dart';
 import 'package:e_commerce/utils/texts.dart';
 import 'package:e_commerce/widgets/card_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/src/widgets/container.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
@@ -24,10 +24,10 @@ class _HomeViewState extends State<HomeView> {
       body: Column(
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.06,
+            height: MediaQuery.of(context).size.height * 0.03,
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.90,
+            height: MediaQuery.of(context).size.height * 0.93,
             width: MediaQuery.of(context).size.width * 100,
             child: Column(
               children: [
@@ -36,9 +36,9 @@ class _HomeViewState extends State<HomeView> {
                     alignment: Alignment.centerLeft,
                     child: const Icon(Icons.menu)),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.03,
+                  height: MediaQuery.of(context).size.height * 0.02,
                 ),
-                Container(
+                SizedBox(
                   // color: Colors.deepPurpleAccent,
                   width: MediaQuery.of(context).size.width * 1.00,
                   // height: MediaQuery.of(context).size.height * 0.38,
@@ -103,7 +103,7 @@ class _HomeViewState extends State<HomeView> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.03,
                 ),
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width * 1.00,
                   child: Text(
                     TextConstant.recommendedText,
@@ -152,8 +152,22 @@ class _HomeViewState extends State<HomeView> {
                         0.568)
                   ],
                 ),
+
+
+
+                SizedBox(
+            height: MediaQuery.of(context).size.height * 0.03,
+            
+          ),
+
                 GNav(tabs: [
                   GButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const HomeView()));
+              },
                     icon: Icons.home_outlined,
                     iconColor: ColorConstant.blackColor,
                     style: GnavStyle.oldSchool,
@@ -192,6 +206,12 @@ class _HomeViewState extends State<HomeView> {
                         fontFamily: 'DM Sans'),
                   ),
                   GButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const AddToCard()));
+              },
                     icon: LineIcons.store,
                     iconColor: ColorConstant.blackColor,
                     style: GnavStyle.oldSchool,
@@ -208,6 +228,12 @@ class _HomeViewState extends State<HomeView> {
                         fontFamily: 'DM Sans'),
                   ),
                   GButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ShippingPage()));
+              },
                     icon: Icons.person_outline_outlined,
                     iconColor: ColorConstant.blackColor,
                     style: GnavStyle.oldSchool,
@@ -229,6 +255,7 @@ class _HomeViewState extends State<HomeView> {
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.010,
+            
           ),
           Container(
             alignment: Alignment.bottomCenter,
